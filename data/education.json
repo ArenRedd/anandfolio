@@ -1,0 +1,50 @@
+[
+   {
+      "id": 1,
+      "date": "June 2025 - July 2028",
+      "title": "Bachelor of Engineering in Computer Science (Cybersecurity)",
+      "institution": "Arifa Institute of Technology",
+      "department": "Department of Computer Science & Engineering",
+      "location": "Nagapattinam, Tamil Nadu, India",
+      "cgpa": "",
+      "achievements": [
+         "1st Place - Ideathon at XENO 2K26 (Sir Isaac Newton College of Engg)",
+         "1st Place - PSG-STEP Dream2Reality Programme Hackathon (Defence Ecosystem)",
+         "1st Place - Ideathon at FESTRONIX 2025 (K. Ramakrishnan College of Technology)",
+         "1st Prize - Academic Student Summit (EGS Pillay Group of Institutions)",
+         "2nd Prize - National Project Expo (Indra Ganesan Institute of Technology)",
+         "3rd Prize - Kadarkalam Hackathon (StartupTN & AIIC, StartupTN Smart Card Awardee)",
+         "4th Prize - CHAKRAVYUHA 2K26 24-Hour Hackathon (J.J. College of Engineering)",
+         "Individual Prize - Naan Mudhalvan x SFJ Hackathon (St. Joseph's College of Engg)",
+         "Selected for Round 2 - MSME Hackathon",
+         "ISRO Hackathon Participant - NetOracle AI-Powered Air-Gapped Network Security",
+         "Founder & President - Arifa Cyber Corps (Cybersecurity & Cloud Club)",
+         "AWS Student Builder Group Leader & Google Student Ambassador"
+      ],
+      "skills": [
+         "Cybersecurity",
+         "Cloud Computing",
+         "Network Security",
+         "Cryptography",
+         "Linux Administration",
+         "Python"
+      ]
+   },
+   {
+      "id": 2,
+      "date": "June 2020 - July 2023",
+      "title": "Diploma in Engineering",
+      "institution": "Government Polytechnic College",
+      "department": "Department of Engineering",
+      "location": "Tamil Nadu, India",
+      "cgpa": "80%",
+      "achievements": ["Graduated with Distinction (Grade: 80%)"],
+      "skills": [
+         "Data Structures",
+         "Operating Systems",
+         "Computer Networks",
+         "System Administration",
+         "C/C++"
+      ]
+   }
+]

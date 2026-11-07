@@ -1,0 +1,208 @@
+{
+   "name": "Anandram",
+   "title": "Cybersecurity Student & Cloud Engineer",
+   "role": "CyberCloud Architect | Cloud & Security",
+   "employer": "Arifa Tech",
+   "location": "Chennai, India",
+   "timezone": "Asia/Kolkata",
+   "intro": "Cybersecurity student and cloud engineer specializing in secure-by-design cloud architecture, security guardrails, and automated incident response on AWS. Founder of Arifa Cyber Corps.",
+   "role_label": "CyberCloud Architect & Cloud Security Engineer",
+   "hero_taglines": [
+      "Secure by design from day one.",
+      "Automated incident response on AWS.",
+      "Zero-downtime blue/green rollouts.",
+      "Infrastructure as tested code."
+   ],
+   "headline": "I build *secure* cloud platforms that scale.",
+   "hero_greeting": "Hi, I'm",
+   "availability": "Open for cloud & cybersecurity opportunities",
+   "contact": {
+      "github": "ArenRedd"
+   },
+   "about": {
+      "greeting": "👋 Hi, my name is Anandram.",
+      "current_role": "💼 Cybersecurity student and cloud builder with a secure-by-design approach. Developing automated AWS architectures, incident response workflows, and containerized deployments.",
+      "specialization": "🚀 Cloud & DevOps: AWS Organizations (OU hierarchy, SCPs, Control Tower landing zone governance), Amazon SageMaker and Bedrock security, EventBridge, Docker, Linux, least-privilege IAM guardrails, MLOps model drift, and aws-samples patterns.",
+      "education": "🎓 B.E. in Computer Science (Cybersecurity) at Arifa Institute of Technology (2025–2028). Diploma in Engineering (80%). AWS Certified Cloud Practitioner.",
+      "competitive_programming": "🏆 15+ hackathon winner, AWS Student Builder Lead — $10K grant before final year, Cyber Club President — 500+ students, 15+ sessions, built curriculum"
+   },
+   "impact": {
+      "clients_served": "3",
+      "clients_note": "Financial services and enterprise customers",
+      "years_at_aws": "2+"
+   },
+   "highlights": [
+      {
+         "value": "4",
+         "label": "AWS Projects",
+         "note": "Production-shaped architectures and labs"
+      },
+      {
+         "value": "500+",
+         "label": "Students Mentored",
+         "note": "Sessions conducted via Arifa Cyber Corps"
+      },
+      {
+         "value": "1st",
+         "label": "AWS Student Builder",
+         "note": "1st Prize in cloud learning & community"
+      },
+      {
+         "value": "Lead",
+         "label": "Google Ambassador",
+         "note": "Selected Google Student Ambassador"
+      }
+   ],
+   "stats": {
+      "headings": {
+         "highlights": "Highlights",
+         "impact": "At AWS",
+         "delivery": "Delivery & credentials",
+         "open_source": "Open source",
+         "competitive": "Competitive programming"
+      },
+      "tiles": {
+         "clients_served": { "label": "Customer engagements" },
+         "years_at_aws": {
+            "label": "Years at AWS",
+            "note": "Professional Services since 2024"
+         },
+         "speaker_certs": {
+            "label": "Speaker certifications",
+            "note": "Associate and Senior"
+         },
+         "talks": {
+            "label": "Talks & AWS samples",
+            "note": "Presented or published at AWS"
+         },
+         "projects": {
+            "label": "Projects shipped",
+            "note": "{featured} featured"
+         },
+         "certifications": { "label": "Active certifications" },
+         "badges": { "label": "Learning badges" },
+         "podium": {
+            "label": "Podium finishes",
+            "note": "{first} first, {second} second, {third} third"
+         },
+         "merged_prs": {
+            "label": "PRs merged upstream",
+            "note": "Across {repos} projects",
+            "note_coauthored_one": "Plus 1 co-authored fix",
+            "note_coauthored_many": "Plus {count} co-authored fixes"
+         },
+         "stars": {
+            "label": "GitHub stars",
+            "note": "Combined, projects merged into"
+         },
+         "repos": {
+            "label": "Projects contributed to",
+            "note": "{big} with 10k+ stars"
+         },
+         "answers": {
+            "label": "Community answers",
+            "note": "{accepted} accepted, {helpful} marked helpful"
+         },
+         "leetcode_rating": {
+            "label": "LeetCode rating",
+            "note": "{badge} badge, top {top} of contestants"
+         },
+         "problems_solved": {
+            "label": "Problems solved",
+            "note": "{leetcode} LeetCode, {gfg} GeeksforGeeks"
+         },
+         "contests": {
+            "label": "Contests played",
+            "note": "Best finish: rank {rank}"
+         },
+         "hard_solved": {
+            "label": "Hard problems solved",
+            "note": "The hardest LeetCode tier"
+         }
+      },
+      "platforms": {
+         "link_label": "View",
+         "github": {
+            "label": "GitHub",
+            "contributions": "Contributions",
+            "pull_requests": "Pull requests",
+            "longest_streak": "Longest streak",
+            "streak_value": "{days} days",
+            "updated": "In the last year | updated {date}",
+            "languages": "Top languages by code size",
+            "profile_label": "GitHub profile @{username}",
+            "calendar": {
+               "label": "Daily GitHub contributions over the last year",
+               "current": "Current streak",
+               "less": "Less",
+               "more": "More",
+               "loading": "Loading GitHub contributions",
+               "summary": "{label}. {current} {days}.",
+               "days_one": "{count} day",
+               "days_many": "{count} days",
+               "tip": "{what} on {when}",
+               "contributions_none": "No contributions",
+               "contributions_one": "{count} contribution",
+               "contributions_many": "{count} contributions"
+            }
+         },
+         "leetcode": {
+            "label": "LeetCode",
+            "profile_label": "LeetCode profile {username}",
+            "top": "top {top}",
+            "best_rating": "Peak rating",
+            "problems_solved": "Solved",
+            "contests": "Contests",
+            "rating_peak": "PEAK {rating}",
+            "rating_contests": "{count} contests",
+            "rating_summary": "Contest rating from {first} in {first_year} to {last} in {last_year} over {count} contests, peak {peak}.",
+            "difficulty": "Solved by difficulty",
+            "easy": "Easy",
+            "medium": "Medium",
+            "hard": "Hard"
+         },
+         "geeksforgeeks": {
+            "label": "GeeksforGeeks",
+            "caption": "Problems Solved"
+         },
+         "hackerrank": {
+            "label": "HackerRank",
+            "caption": "Problem Solving | {cpp} C++"
+         }
+      }
+   },
+   "languages": [
+      { "name": "English", "level": "Professional Working" },
+      { "name": "Tamil", "level": "Native" }
+   ],
+   "social_profiles": [
+      {
+         "id": 1,
+         "name": "LinkedIn",
+         "link": "https://www.linkedin.com/in/anandram-mohan/",
+         "icon": "BsLinkedin"
+      },
+      {
+         "id": 2,
+         "name": "GitHub",
+         "link": "https://github.com/ArenRedd",
+         "icon": "FaGithub"
+      },
+      {
+         "id": 3,
+         "name": "Instagram",
+         "link": "https://www.instagram.com/aren_redd/",
+         "icon": "FiInstagram"
+      },
+      {
+         "id": 4,
+         "name": "Blog",
+         "link": "https://arenredd.github.io/",
+         "icon": "FiGlobe"
+      }
+   ],
+   "site": {
+      "tech_stack": ["React 19", "Vite 8", "Tailwind v4", "Motion", "Lenis"],
+      "resume_url": "/resume.pdf"
+   }
+}

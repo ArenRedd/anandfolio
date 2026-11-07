@@ -1,0 +1,58 @@
+{
+   "contact_options": [
+      {
+         "id": 1,
+         "icon": "MdOutlineEmail",
+         "title": "Email Me",
+         "value": "hello@anandram.me",
+         "link": "mailto:hello@anandram.me",
+         "message": "Email"
+      },
+      {
+         "id": 2,
+         "icon": "BsLinkedin",
+         "title": "LinkedIn",
+         "value": "in/anandram-mohan",
+         "link": "https://www.linkedin.com/in/anandram-mohan/",
+         "message": "Connect"
+      },
+      {
+         "id": 3,
+         "icon": "FiInstagram",
+         "title": "Instagram",
+         "value": "@aren_redd",
+         "link": "https://www.instagram.com/aren_redd/",
+         "message": "Message"
+      },
+      {
+         "id": 4,
+         "icon": "FiCalendar",
+         "title": "Schedule a Chat",
+         "value": "cal.com/anand-ram-yxexfl",
+         "link": "https://cal.com/anand-ram-yxexfl",
+         "message": "Schedule"
+      },
+      {
+         "id": 5,
+         "icon": "FiGithub",
+         "title": "GitHub",
+         "value": "ArenRedd",
+         "link": "https://github.com/ArenRedd",
+         "message": "Follow"
+      },
+      {
+         "id": 6,
+         "icon": "FiGlobe",
+         "title": "Blog / Website",
+         "value": "arenredd.github.io",
+         "link": "https://arenredd.github.io/",
+         "message": "Visit"
+      }
+   ],
+   "email_config": {
+      "service_id": "service_lyt547p",
+      "template_id": "template_yz438w6",
+      "public_key": "PAcL61ygLI8WYG16R",
+      "validation_pattern": "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?\\.)+[a-zA-Z](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])$"
+   }
+}

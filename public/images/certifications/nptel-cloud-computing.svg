@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="nptelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+  </defs>
+  <polygon points="100,12 178,56 178,144 100,188 22,144 22,56" fill="#1C1917" stroke="#F59E0B" stroke-width="4" stroke-linejoin="round"/>
+  <text x="100" y="58" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#F59E0B" text-anchor="middle" letter-spacing="1.5">NPTEL</text>
+  <text x="100" y="74" font-family="system-ui, sans-serif" font-size="9" font-weight="700" fill="#FCD34D" text-anchor="middle">IIT KHARAGPUR</text>
+  <rect x="35" y="94" width="130" height="32" rx="4" fill="#F59E0B"/>
+  <text x="100" y="108" font-family="system-ui, sans-serif" font-size="10" font-weight="900" fill="#1C1917" text-anchor="middle">CLOUD</text>
+  <text x="100" y="121" font-family="system-ui, sans-serif" font-size="10" font-weight="900" fill="#1C1917" text-anchor="middle">COMPUTING</text>
+  <text x="100" y="156" font-family="system-ui, sans-serif" font-size="9.5" font-weight="800" fill="#FBBF24" text-anchor="middle">ELITE (78%)</text>
+</svg>

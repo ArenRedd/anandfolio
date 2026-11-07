@@ -1,0 +1,706 @@
+{
+   "spotlight_project_id": 1,
+   "featured_projects": [
+      {
+         "id": 1,
+         "title": "AI Threat Detection Engine",
+         "description": "AI-powered threat detection engine that analyzes nginx access logs using a 3-model ML ensemble (Autoencoder, Random Forest, Isolation Forest) exported to ONNX to classify HTTP traffic as benign or malicious in real-time with sub-millisecond inference.",
+         "date": "October 2026",
+         "status": "complete",
+         "tools_tech": [
+            "Python",
+            "PyTorch",
+            "ONNX",
+            "Docker",
+            "React 19",
+            "FastAPI",
+            "scikit-learn",
+            "WebSockets",
+            "Nginx"
+         ],
+         "features": [
+            "3-model ML ensemble (Autoencoder + Random Forest + Isolation Forest) exported to ONNX for sub-millisecond CPU inference",
+            "4-stage async pipeline: parses raw access logs, extracts 35-dimensional feature vectors, scores via rules + ML, dispatches alerts",
+            "Rule engine with ModSecurity CRS-inspired detection patterns for SQLi, XSS, path traversal, command injection, Log4Shell, and SSRF",
+            "Real-time WebSocket alert feed streaming live severity scoring, threat classification, and confidence metrics to a React dashboard",
+            "Deploys as a lightweight Docker sidecar alongside any nginx-based web infrastructure with zero code modification"
+         ],
+         "case_study": {
+            "problem": "Traditional web application firewalls rely solely on static regex signatures that struggle with zero-day evasion, while heavy ML pipelines introduce unacceptable request latency.",
+            "built": "Architected an asynchronous 4-stage pipeline that pairs instant rule matching with a 3-model ML ensemble exported to ONNX for sub-millisecond CPU scoring.",
+            "decisions": [
+               "Used ONNX runtime for CPU inference to avoid GPU dependency in container sidecars",
+               "Combined unsupervised anomaly detection (Autoencoder + Isolation Forest) with supervised classification (Random Forest)",
+               "Streamed detection events over WebSockets to decouple inference from dashboard rendering",
+               "Packaged as a drop-in Docker sidecar that mounts nginx log volumes directly"
+            ],
+            "outcome": "Achieved real-time classification of HTTP attacks (SQLi, XSS, SSRF) with sub-millisecond inference latency and zero downtime."
+         },
+         "github": "https://github.com/ArenRedd/ai-threat-detection",
+         "live": ""
+      },
+      {
+         "id": 2,
+         "title": "SOC Automation Lab (Wazuh, Shuffle, TheHive)",
+         "description": "End-to-end Security Operations Center (SOC) automation lab integrating Wazuh SIEM for host and network detection, Shuffle SOAR for automated response workflows, and TheHive for centralized incident case management.",
+         "date": "November 2026",
+         "status": "complete",
+         "tools_tech": [
+            "Wazuh",
+            "Shuffle SOAR",
+            "TheHive",
+            "Sysmon",
+            "Docker",
+            "Python",
+            "Elasticsearch",
+            "Cortex",
+            "Linux"
+         ],
+         "features": [
+            "Wazuh SIEM monitoring Windows endpoints and Linux servers with custom rules detecting Mimikatz credential dumping and lateral movement",
+            "Shuffle SOAR workflow engine receiving webhook alerts, parsing IoCs, and querying VirusTotal and AbuseIPDB for automated enrichment",
+            "TheHive incident response platform automatically generating alert cases with enriched observables, severity ratings, and task checklists",
+            "Automated threat containment action triggers that isolate compromised endpoints and block malicious IPs at the perimeter",
+            "Complete telemetry pipeline using Sysmon on endpoints for granular process creation, network connection, and LSASS access tracking"
+         ],
+         "case_study": {
+            "problem": "Security analysts in enterprise SOCs face overwhelming alert fatigue and slow manual triage when correlating endpoint telemetry with threat intelligence.",
+            "built": "Constructed an automated detection and response ecosystem connecting Wazuh SIEM, Shuffle SOAR webhooks, and TheHive case management.",
+            "decisions": [
+               "Deployed Sysmon with customized configuration to catch credential theft techniques (LSASS access, Mimikatz)",
+               "Automated tier-1 triage by orchestrating VirusTotal and AbuseIPDB API lookups inside Shuffle SOAR",
+               "Configured webhooks to automatically escalate High and Critical alerts directly to TheHive with actionable forensic tasks"
+            ],
+            "outcome": "Reduced incident triage and enrichment time from 15+ minutes per alert down to under 5 seconds with full contextual observables."
+         },
+         "github": "https://github.com/ArenRedd/soc-automation-lab",
+         "live": ""
+      },
+      {
+         "id": 3,
+         "title": "Security Incident Response Automation on AWS",
+         "description": "Production-ready incident response automation architecture that ingests security findings from AWS Security Hub and Amazon GuardDuty via EventBridge, triggering automated Lambda containment playbooks and SNS notifications.",
+         "date": "July 2026",
+         "status": "complete",
+         "tools_tech": [
+            "AWS Security Hub",
+            "Amazon EventBridge",
+            "AWS Lambda",
+            "Amazon GuardDuty",
+            "Amazon SNS",
+            "IAM",
+            "CloudWatch",
+            "Python"
+         ],
+         "features": [
+            "Event-driven architecture using Amazon EventBridge rules to filter findings from AWS Security Hub and Amazon GuardDuty in real-time",
+            "Automated containment playbooks executed by AWS Lambda: isolates compromised EC2 instances, revokes compromised IAM sessions, and applies deny-all NACLs",
+            "Multi-channel alerting via Amazon SNS delivering structured JSON summaries and actionable remediation links to security engineering teams",
+            "Comprehensive audit logging: every triggered action, finding snapshot, and containment status recorded in CloudWatch and DynamoDB",
+            "Least-privilege IAM execution roles with granular resource-based policies ensuring remediation Lambdas only modify affected target resources"
+         ],
+         "case_study": {
+            "problem": "Cloud environments experience credential exfiltration and unauthorized resource access that require immediate containment before human operators can respond.",
+            "built": "Developed a serverless automated incident response framework deploying EventBridge-triggered Lambda containment playbooks across Security Hub findings.",
+            "decisions": [
+               "Used EventBridge pattern filtering to trigger containment only on High and Critical findings",
+               "Created deterministic isolation actions (security group swapping, IAM session invalidation) that preserve forensic state",
+               "Employed SNS topics with dead-letter queues to guarantee alert delivery without dropping notifications"
+            ],
+            "outcome": "Contained compromised cloud instances and invalidated leaked IAM credentials within 3 seconds of GuardDuty detection."
+         },
+         "github": "https://github.com/ArenRedd/security-incident-response-automation",
+         "live": ""
+      },
+      {
+         "id": 4,
+         "title": "Advanced Blue-Green Deployments with CodeDeploy",
+         "description": "Sophisticated zero-downtime deployment pipeline for containerized microservices on Amazon ECS and serverless AWS Lambda, featuring traffic shifting via Application Load Balancer and automated CloudWatch alarm-driven rollbacks.",
+         "date": "June 2026",
+         "status": "complete",
+         "tools_tech": [
+            "AWS CodeDeploy",
+            "Amazon ECS",
+            "AWS Lambda",
+            "Application Load Balancer",
+            "CloudWatch Alarms",
+            "Terraform",
+            "Docker"
+         ],
+         "features": [
+            "Zero-downtime blue/green deployment strategy routing live production traffic across twin target groups on Application Load Balancer",
+            "Automated canary and linear traffic shifting schedules (e.g. Canary 10% 5min, then 90%) validating service health before full cutover",
+            "CloudWatch 5xx error rate and p99 latency alarms configured as automated rollback triggers in CodeDeploy for instant failsafe recovery",
+            "Pre-traffic and post-traffic lifecycle validation hooks powered by Lambda functions running smoke tests against the green target group",
+            "Reusable infrastructure-as-code modules managing ECS task definitions, service configurations, and CodeDeploy deployment groups"
+         ],
+         "case_study": {
+            "problem": "Traditional rolling deployments risk service interruption, expose all users to bugs simultaneously, and require slow manual rollback procedures.",
+            "built": "Engineered an automated blue/green pipeline pairing ALB traffic shifting with CodeDeploy lifecycle hooks and CloudWatch alarm rollbacks.",
+            "decisions": [
+               "Utilized dual ALB target groups so green environments can be fully validated before receiving production traffic",
+               "Configured automated rollback triggers on p99 latency spikes and HTTP 5xx error thresholds",
+               "Implemented pre-traffic Lambda hook to run database schema compatibility checks prior to switching listeners"
+            ],
+            "outcome": "Achieved 100% zero-downtime deployments with automated rollback within 60 seconds if error thresholds are breached."
+         },
+         "github": "https://github.com/ArenRedd/advanced-blue-green-deployments",
+         "live": ""
+      },
+      {
+         "id": 5,
+         "title": "TOR-UNVEIL: Network Forensics & Deanonymization",
+         "description": "Cybersecurity research and forensics platform developed to trace Tor network traffic by correlating statistical activity patterns, consensus relay descriptors, entry guard node timing, and PCAP packet captures with confidence scoring.",
+         "date": "August 2026",
+         "status": "complete",
+         "tools_tech": [
+            "Python",
+            "Scapy",
+            "Wireshark / PCAP",
+            "Network Forensics",
+            "Tor Metrics API",
+            "Statistical Analysis",
+            "FastAPI"
+         ],
+         "features": [
+            "Automated harvesting and parsing of Tor consensus data, bandwidth authorities, and relay descriptor metrics",
+            "Statistical flow correlation matching packet timing and byte-size bursts between capture points and relay activity windows",
+            "Entry guard node identification algorithm narrowing origin networks through intersection and uptime probability scoring",
+            "Interactive network topology visualization plotting relay circuits, confidence intervals, and timeline reconstructions",
+            "PCAP parser analyzing encrypted packet streams, inter-packet arrival times, and TLS handshake fingerprints"
+         ],
+         "case_study": {
+            "problem": "Anonymity networks like Tor conceal threat actor command-and-control infrastructure, creating significant challenges for digital forensics and incident investigations.",
+            "built": "Created an analytical forensic framework that ingests network packet captures and correlates traffic bursts against Tor consensus relay telemetry.",
+            "decisions": [
+               "Applied statistical timing-correlation algorithms based on RAPTOR research across packet arrival intervals",
+               "Queried real-time Tor metrics archive to cross-reference historical relay uptime and bandwidth capacities",
+               "Generated probabilistic confidence scores rather than deterministic claims to assist law enforcement forensic documentation"
+            ],
+            "outcome": "Successfully demonstrated entry-guard correlation on forensic lab test captures with high confidence scoring."
+         },
+         "github": "https://github.com/ArenRedd/TOR-UNVEIL",
+         "live": ""
+      },
+      {
+         "id": 6,
+         "title": "Enterprise Secure Company Network Architecture",
+         "description": "Master-level multi-tier enterprise network architecture designed in Cisco Packet Tracer, featuring Cisco ASA firewalls with three security zones (Inside, Outside, DMZ), dual-ISP BGP/failover, HSRP redundancy, OSPF routing, and VLAN segmentation.",
+         "date": "December 2025",
+         "status": "complete",
+         "tools_tech": [
+            "Cisco ASA Firewalls",
+            "Cisco Packet Tracer",
+            "OSPF",
+            "HSRP",
+            "VLANs & 802.1Q",
+            "ACLs & NAT",
+            "VoIP (Cisco 2811)",
+            "VPN"
+         ],
+         "features": [
+            "Cisco ASA Firewall architecture enforcing strict zone security policies across Outside (security 0), DMZ (security 50), and Inside (security 100)",
+            "Dual-ISP backbone configuration providing automatic WAN failover and load balancing for high business availability",
+            "HSRP (Hot Standby Router Protocol) active/standby default gateway redundancy across core layer-3 distribution switches",
+            "6 department VLANs distributed across a 3-floor building topology with inter-VLAN routing and dynamic ACL inspection",
+            "DMZ server farm hosting public DNS, web, and email services isolated from internal corporate workstations and databases"
+         ],
+         "case_study": {
+            "problem": "Growing mid-size enterprise networks suffer from flat unsegmented subnets, single points of failure at the WAN edge, and lack of firewall perimeter isolation.",
+            "built": "Engineered a complete enterprise topology with dual-firewall perimeter, HSRP core switching, OSPF backbone, and multi-zone access control.",
+            "decisions": [
+               "Segmented infrastructure into Inside, DMZ, and Outside security zones with stateful packet inspection on Cisco ASA",
+               "Configured HSRP on core switches to ensure sub-second failover for all department subnets",
+               "Isolated public-facing services into a dedicated DMZ to prevent lateral movement into corporate databases"
+            ],
+            "outcome": "Simulated full campus failure scenarios with 0 packet loss during primary link drops and verified strict isolation against unauthorized lateral scans."
+         },
+         "github": "https://github.com/ArenRedd/Secure-Company-Network-Architecture",
+         "live": ""
+      }
+   ],
+   "collaborative_projects": [],
+   "community_projects": [
+      {
+         "id": 7,
+         "title": "Hermes Agent Expert Knowledge Skill",
+         "description": "Comprehensive reference knowledge skill and specialized subagent bundle for Hermes Agent (Nous Research), providing instant architecture blueprints, configuration mastery, CLI tools, messaging gateway integration, and VPS hardening playbooks.",
+         "date": "October 2026",
+         "status": "complete",
+         "tools_tech": [
+            "Hermes Agent",
+            "AI Agents",
+            "Markdown",
+            "Python",
+            "YAML",
+            "Nous Research",
+            "MCP",
+            "Bash"
+         ],
+         "features": [
+            "16 structured knowledge modules covering agent architecture, VPS deployment, model providers, CLI commands, and toolsets",
+            "Specialized agent personas: Hermes Expert, Mission Planner, Troubleshooter, Cost Optimizer, and Security Auditor",
+            "Interactive playbook for Telegram, Discord, and WhatsApp messaging gateway setup with webhook and socket management",
+            "Automated cron scheduling, agent memory persistence, and multi-agent delegation pattern blueprints",
+            "Security hardening guidelines including PID namespace isolation, directory ACLs, and tool permission boundaries"
+         ],
+         "case_study": {
+            "problem": "Operating autonomous AI agent systems like Hermes Agent requires navigating complex tool configuration, VPS runtime environments, and messaging gateways without unified reference material.",
+            "built": "Authored a modular knowledge skill system with 16 reference guides and 5 domain-specific agent definitions formatted for instant retrieval.",
+            "decisions": [
+               "Structured reference chapters by operational domain (foundations, tools, messaging, security, memory)",
+               "Packaged specialized subagent system prompts optimized for specific tasks like debugging and cost auditing",
+               "Mapped agent tool integration against open Model Context Protocol (MCP) standards"
+            ],
+            "outcome": "Created the definitive technical knowledge base for Hermes Agent adopted by builders for autonomous server management."
+         },
+         "github": "https://github.com/ArenRedd/hermes-knowledge-skill",
+         "live": ""
+      },
+      {
+         "id": 8,
+         "title": "Hermes Agent Skill Forge & Playbooks",
+         "description": "Toolkit and playbook repository designed to build, test, and deploy production-grade agent skills, custom MCP server plugins, and autonomous workflows on the Hermes Agent platform.",
+         "date": "October 2026",
+         "status": "complete",
+         "tools_tech": [
+            "Hermes Agent",
+            "Python",
+            "MCP (Model Context Protocol)",
+            "TypeScript",
+            "Bash",
+            "Agentic Workflows"
+         ],
+         "features": [
+            "Standardized skill scaffolding generator creating valid skill manifests, agent definitions, and reference directories",
+            "Pre-built playbooks for social media automation, content scheduling, continuous code review, and VPS monitoring",
+            "MCP server integration templates connecting Hermes agents to external APIs, databases, and filesystem tools",
+            "Automated skill verification linter checking YAML frontmatter, path resolution, and argument schemas",
+            "Multi-agent team orchestration scripts enabling supervisor and worker agent task division"
+         ],
+         "case_study": {
+            "problem": "Developers creating custom skills for AI agents lack structured boilerplate, leading to inconsistent tool schemas and broken agent execution loops.",
+            "built": "Created an open-source skill forge repository providing scaffolding templates, verification linters, and reusable playbooks.",
+            "decisions": [
+               "Enforced agentskills.io and MCP open standards across all tool and skill configurations",
+               "Built automated linting to catch missing reference files and invalid yaml definitions before deployment",
+               "Included real-world playbooks for social automation and server management as reference implementations"
+            ],
+            "outcome": "Streamlined new agent skill creation from hours to minutes with turnkey testing and validation scripts."
+         },
+         "github": "https://github.com/ArenRedd/hermes-forge-repo",
+         "live": ""
+      },
+      {
+         "id": 9,
+         "title": "Cybersecurity Research Blog & Digital Garden",
+         "description": "Personal cybersecurity blog and technical portfolio built with modern static architecture, featuring deep-dive articles on ethical hacking, packet tracer architectures, AI agents, SOC automation, and real-world security experiments.",
+         "date": "October 2026",
+         "status": "complete",
+         "tools_tech": [
+            "Hexo",
+            "HTML5",
+            "CSS3 / Stylus",
+            "JavaScript",
+            "GitHub Pages",
+            "Markdown",
+            "SEO"
+         ],
+         "features": [
+            "Clean, performance-optimized reader experience with dark cyber aesthetic, syntax highlighting, and responsive layout",
+            "Categorized technical publications spanning Networking, Enterprise Network Design, Tor, Social Engineering, and Mentorship",
+            "Interactive client-side search engine indexing article titles, tags, categories, and content for instant discovery",
+            "Automated GitHub Actions deployment pipeline building static assets and publishing directly to GitHub Pages",
+            "Structured open-graph metadata, RSS feeds, and semantic HTML maximizing search accessibility and syndication"
+         ],
+         "case_study": {
+            "problem": "Documenting intricate cybersecurity experiments, packet tracer setups, and reverse-engineering findings requires a persistent, clean platform free of platform lock-in.",
+            "built": "Developed a custom-themed static blog on Hexo hosted on GitHub Pages with automated CI/CD publishing.",
+            "decisions": [
+               "Employed lightweight client-side search for rapid zero-latency article filtering without backend infrastructure",
+               "Designed clean cybersecurity-themed typographic hierarchy emphasizing code blocks and architecture diagrams",
+               "Configured automatic build-and-deploy pipelines via GitHub Actions on every markdown commit"
+            ],
+            "outcome": "Published comprehensive guides reaching hundreds of student peers and cybersecurity learners globally."
+         },
+         "github": "https://github.com/ArenRedd/arenredd.github.io",
+         "live": "https://arenredd.github.io/"
+      }
+   ],
+   "other_projects": [
+      {
+         "id": 10,
+         "title": "Serverless Data Lake Architecture on AWS",
+         "description": "Scalable enterprise data lake architecture leveraging shared AWS Lambda layers, AWS Glue ETL jobs, Amazon EventBridge orchestration, Amazon S3 tiered storage, and automated data quality validation with quarantine handling.",
+         "date": "July 2026",
+         "status": "complete",
+         "tools_tech": [
+            "AWS Lambda",
+            "AWS Glue",
+            "Amazon EventBridge",
+            "Amazon S3",
+            "AWS Athena",
+            "CloudWatch",
+            "Python"
+         ],
+         "features": [
+            "Event-driven ingestion pipeline: file arrivals in raw S3 buckets trigger validation Lambda functions via EventBridge",
+            "Shared Lambda Layers centralizing common data transformation utilities, schema validation models, and third-party libraries",
+            "AWS Glue crawler and ETL jobs converting unstructured/JSON logs into partitioned Parquet format for fast Athena querying",
+            "Quarantine pattern: malformed records automatically isolated into dead-letter S3 buckets with CloudWatch alert notifications",
+            "Lifecycle tiering policies automatically transitioning raw data from S3 Standard to S3 Glacier for significant cost savings"
+         ],
+         "case_study": {
+            "problem": "Disparate data silos and duplicated transformation logic across multiple services lead to bloated Lambda functions and slow analytics queries.",
+            "built": "Engineered a serverless data lake pipeline using Lambda layers for code reuse and Glue ETL for columnar Parquet conversion.",
+            "decisions": [
+               "Packaged data validation logic into shared Lambda Layers to prevent code drift across microservices",
+               "Converted raw records into columnar Snappy-compressed Parquet, reducing Athena query scan costs by ~80%",
+               "Configured automated dead-letter quarantine buckets to preserve erroneous payloads for developer inspection"
+            ],
+            "outcome": "Reduced data processing overhead by 70% and enabled ad-hoc SQL querying over millions of records with sub-second latency."
+         },
+         "github": "https://github.com/ArenRedd/serverless-data-lake-architecture",
+         "live": ""
+      },
+      {
+         "id": 11,
+         "title": "Oracle to PostgreSQL Heterogeneous Migration",
+         "description": "Production-grade database migration blueprint moving enterprise workloads from on-premises Oracle databases to Amazon Aurora PostgreSQL using AWS Database Migration Service (DMS) and Schema Conversion Tool (SCT) with continuous replication (CDC).",
+         "date": "July 2026",
+         "status": "complete",
+         "tools_tech": [
+            "AWS DMS",
+            "Amazon Aurora PostgreSQL",
+            "AWS SCT",
+            "Oracle DB",
+            "CloudWatch",
+            "IAM",
+            "SQL"
+         ],
+         "features": [
+            "Automated schema conversion using AWS Schema Conversion Tool (SCT) with automated data type and constraint translation",
+            "Full-load data migration combined with continuous Change Data Capture (CDC) replicating live transactions during transition",
+            "AWS DMS replication instances with multi-AZ high availability and optimized memory buffers for high transaction throughput",
+            "Comprehensive data validation task comparing source and target row counts, checksums, and table structures in real-time",
+            "Cutover plan minimizing business downtime to under 15 minutes by synchronizing transaction logs before final DNS switch"
+         ],
+         "case_study": {
+            "problem": "Enterprise Oracle databases impose steep licensing fees and vendor lock-in, but live migration to open-source Aurora PostgreSQL risks downtime and data corruption.",
+            "built": "Architected an end-to-end migration pipeline using AWS SCT for schema transformation and AWS DMS for zero-loss CDC replication.",
+            "decisions": [
+               "Used AWS SCT to automatically convert ~85% of complex PL/SQL procedures and tables to PL/pgSQL",
+               "Implemented ongoing CDC replication alongside initial full load to allow parallel testing without stopping production",
+               "Configured automated CloudWatch alarms on DMS replication latency and memory utilization"
+            ],
+            "outcome": "Eliminated Oracle licensing overhead while achieving zero data loss and under 15 minutes total cutover downtime."
+         },
+         "github": "https://github.com/ArenRedd/oracle-to-postgresql-migration-dms",
+         "live": ""
+      }
+   ],
+   "open_source_contributions": [
+      {
+         "repo": "usestrix/strix",
+         "title": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+         "url": "https://github.com/usestrix/strix",
+         "status": "open",
+         "stars": 73110
+      },
+      {
+         "repo": "elder-plinius/G0DM0D3",
+         "title": "LIBERATED AI CHAT",
+         "url": "https://github.com/elder-plinius/G0DM0D3",
+         "status": "open",
+         "stars": 12064
+      },
+      {
+         "repo": "z00z/G0DM0D3",
+         "title": "LIBERATED AI CHAT",
+         "url": "https://github.com/z00z/G0DM0D3",
+         "status": "open",
+         "stars": 38
+      },
+      {
+         "repo": "morluto/rea",
+         "title": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+         "url": "https://github.com/morluto/rea",
+         "status": "open",
+         "stars": 415990
+      },
+      {
+         "repo": "jaredrhod/barehands",
+         "title": "Move things on your screen with your bare hands. A webcam-powered, hand-tracked interface for your AI. No headset. No controllers.",
+         "url": "https://github.com/jaredrhod/barehands",
+         "status": "open",
+         "stars": 1102
+      },
+      {
+         "repo": "emmabostian/developer-portfolios",
+         "title": "A list of developer portfolios for your inspiration",
+         "url": "https://github.com/emmabostian/developer-portfolios",
+         "status": "open",
+         "stars": 27500
+      },
+      {
+         "repo": "gireeshkumarreddy/cinematic-portofilo",
+         "title": "cinematic-portofilo",
+         "url": "https://github.com/gireeshkumarreddy/cinematic-portofilo",
+         "status": "open",
+         "stars": 181
+      },
+      {
+         "repo": "divyashrma18/GOT",
+         "title": "GOT",
+         "url": "https://github.com/divyashrma18/GOT",
+         "status": "open",
+         "stars": 77
+      },
+      {
+         "repo": "mohitvirli/mohitvirli.github.io",
+         "title": "Portfolio website in React-three-fiber, Drei & GSAP",
+         "url": "https://github.com/mohitvirli/mohitvirli.github.io",
+         "status": "open",
+         "stars": 405
+      },
+      {
+         "repo": "ashishps1/awesome-system-design-resources",
+         "title": "Learn System Design concepts and prepare for interviews using free resources.",
+         "url": "https://github.com/ashishps1/awesome-system-design-resources",
+         "status": "open",
+         "stars": 43001
+      },
+      {
+         "repo": "BigBodyCobain/Shadowbroker",
+         "title": "Open-source intelligence for the global theater. Track everything from the corporate/private jets of the wealthy, and spy satellites, to seismic events in one unified interface. Hook an AI agent up…",
+         "url": "https://github.com/BigBodyCobain/Shadowbroker",
+         "status": "open",
+         "stars": 11423
+      },
+      {
+         "repo": "MengTo/kage",
+         "title": "An interactive five-chapter night walk through a Kyoto mountain temple, rendered live in Three.js.",
+         "url": "https://github.com/MengTo/kage",
+         "status": "open",
+         "stars": 1769
+      },
+      {
+         "repo": "juspay/hyperswitch",
+         "title": "Open source, composable payments platform | PCI compliant | SaaS and Self-host options | Enables connectivity to multiple payment, payout, fraud, vault and tokenization providers | Uplifts authoriz…",
+         "url": "https://github.com/juspay/hyperswitch",
+         "status": "open",
+         "stars": 45595
+      },
+      {
+         "repo": "vectorize-io/hindsight",
+         "title": "Hindsight: Agent Memory That Learns",
+         "url": "https://github.com/vectorize-io/hindsight",
+         "status": "open",
+         "stars": 57016
+      },
+      {
+         "repo": "daytonaio/daytona",
+         "title": "Daytona is a Secure and Elastic Infrastructure for Running AI-Generated Code",
+         "url": "https://github.com/daytonaio/daytona",
+         "status": "open",
+         "stars": 71414
+      },
+      {
+         "repo": "mukul975/Anthropic-Cybersecurity-Skills",
+         "title": "817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF & MITRE F3 (Fight Fraud) · agentskills.io standard · Works w…",
+         "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+         "status": "open",
+         "stars": 35359
+      },
+      {
+         "repo": "zarazhangrui/frontend-slides",
+         "title": "Create beautiful slides on the web using a coding agent's frontend skills",
+         "url": "https://github.com/zarazhangrui/frontend-slides",
+         "status": "open",
+         "stars": 31659
+      },
+      {
+         "repo": "zarazhangrui/beautiful-html-templates",
+         "title": "A library of HTML slide templates designed so any coding agent can pick the right one and produce a beautiful deck on the user's behalf, automatically.",
+         "url": "https://github.com/zarazhangrui/beautiful-html-templates",
+         "status": "open",
+         "stars": 4903
+      },
+      {
+         "repo": "emotixco/claude-skills-founder",
+         "title": "Claude Code skills for startup founders — product briefs, competitor analysis, pricing strategy, pitch decks, and GTM plans from your terminal",
+         "url": "https://github.com/emotixco/claude-skills-founder",
+         "status": "open",
+         "stars": 768
+      },
+      {
+         "repo": "ComposioHQ/awesome-claude-skills",
+         "title": "A curated list of awesome Claude Skills, resources, and tools for customizing Claude AI workflows",
+         "url": "https://github.com/ComposioHQ/awesome-claude-skills",
+         "status": "open",
+         "stars": 78458
+      },
+      {
+         "repo": "proficientlyjobs/proficiently-claude-skills",
+         "title": "Claude Code skills for AI-powered job search, resume tailoring, and cover letter writing",
+         "url": "https://github.com/proficientlyjobs/proficiently-claude-skills",
+         "status": "open",
+         "stars": 443
+      },
+      {
+         "repo": "Imbad0202/academic-research-skills",
+         "title": "Academic Research Skills for Claude Code: research → write → review → revise → finalize",
+         "url": "https://github.com/Imbad0202/academic-research-skills",
+         "status": "open",
+         "stars": 54775
+      },
+      {
+         "repo": "Ishan7390/10skills-video",
+         "title": "10skills-video",
+         "url": "https://github.com/Ishan7390/10skills-video",
+         "status": "open",
+         "stars": 74
+      },
+      {
+         "repo": "ArenRedd/AI-Chatbot-using-LLaMA2",
+         "title": "Uncensored AI: An open-source, unrestricted LLaMA 2 model for free and raw AI interactions.",
+         "url": "https://github.com/ArenRedd/AI-Chatbot-using-LLaMA2",
+         "status": "open",
+         "stars": 27
+      },
+      {
+         "repo": "dailymycode/handscanner",
+         "title": "handscanner",
+         "url": "https://github.com/dailymycode/handscanner",
+         "status": "open",
+         "stars": 20
+      },
+      {
+         "repo": "Deepsicaa/HandConnect",
+         "title": "HandConnect",
+         "url": "https://github.com/Deepsicaa/HandConnect",
+         "status": "open",
+         "stars": 158
+      },
+      {
+         "repo": "sickn33/agentic-awesome-skills",
+         "title": "2,884+ reusable AI agent skills for Claude Code, Codex, Cursor and Gemini CLI. AAS Core adds local catalog discovery, agent-owned selection and plan preview. CLI, MCP and plugins.",
+         "url": "https://github.com/sickn33/agentic-awesome-skills",
+         "status": "open",
+         "stars": 48927
+      },
+      {
+         "repo": "Mubeen-jawed/TechFolio",
+         "title": "Open Source Project | Portfolio Website For Tech Professionals. Template to create your online presence without hassle.",
+         "url": "https://github.com/Mubeen-jawed/TechFolio",
+         "status": "open",
+         "stars": 7
+      },
+      {
+         "repo": "kaifcodec/user-scanner",
+         "title": "🕵️♂️ (2-in-1) Email & Username OSINT suite featuring native MCP support for deep data extraction just from a single Email/Username. Analyzes 2720+ actively maintained scan vectors (210+ email / 25…",
+         "url": "https://github.com/kaifcodec/user-scanner",
+         "status": "open",
+         "stars": 5531
+      },
+      {
+         "repo": "farhanashrafdev/90DaysOfCyberSecurity",
+         "title": "This repository contains a 90-day cybersecurity study plan, along with resources and materials for learning various cybersecurity concepts and technologies. The plan is organized into daily tasks, …",
+         "url": "https://github.com/farhanashrafdev/90DaysOfCyberSecurity",
+         "status": "open",
+         "stars": 20752
+      },
+      {
+         "repo": "Hamed233/Cybersecurity-Mastery-Roadmap",
+         "title": "A comprehensive, step-by-step guide to mastering cybersecurity from beginner to expert level with curated resources, tools, and career guidance",
+         "url": "https://github.com/Hamed233/Cybersecurity-Mastery-Roadmap",
+         "status": "open",
+         "stars": 3799
+      },
+      {
+         "repo": "uttambodara/TryHackMeRoadmap",
+         "title": "A list of 350+ free TryHackMe rooms💻 to kick off your cybersecurity learning, organized by topics for easy exploration and practical skill-building !💀💥",
+         "url": "https://github.com/uttambodara/TryHackMeRoadmap",
+         "status": "open",
+         "stars": 647
+      },
+      {
+         "repo": "BehiSecc/First-Bounty",
+         "title": "A complete, beginner-friendly bug bounty roadmap that takes you from zero experience to earning your first bounty.",
+         "url": "https://github.com/BehiSecc/First-Bounty",
+         "status": "open",
+         "stars": 1549
+      },
+      {
+         "repo": "Jacksaur/Gorgeous-GRUB",
+         "title": "Collection of decent Community-made GRUB themes. Contributions welcome!",
+         "url": "https://github.com/Jacksaur/Gorgeous-GRUB",
+         "status": "open",
+         "stars": 6128
+      },
+      {
+         "repo": "v1ewp0rt/evilware-theme",
+         "title": "SCI-FI SCIENTIST LINUX THEME",
+         "url": "https://github.com/v1ewp0rt/evilware-theme",
+         "status": "open",
+         "stars": 66
+      },
+      {
+         "repo": "malwarekid/SOAR-Flow",
+         "title": "SOAR Automation with Shuffle, Wazuh & TheHive | This project integrates Shuffle SOAR, Wazuh SIEM, and TheHive to automate security incident response. It enriches alerts using VirusTotal & AbuseIPDB…",
+         "url": "https://github.com/malwarekid/SOAR-Flow",
+         "status": "open",
+         "stars": 139
+      },
+      {
+         "repo": "jyotirawat224/Fraud-App-Detection-of-Google-play-store-apps-using-Decision-Tree",
+         "title": "This model has been tested on 3 different algorithms: Decision tree, Naïve Bayes, and Logistic regression. Then selected Decision Tree, giving the highest accuracy of 85%. Further Deployed the mode…",
+         "url": "https://github.com/jyotirawat224/Fraud-App-Detection-of-Google-play-store-apps-using-Decision-Tree",
+         "status": "open",
+         "stars": 1
+      },
+      {
+         "repo": "saturn-16/AI-Phishing-Detection-Web-App",
+         "title": "Phishing scams are more rampant than ever — and I wanted to do something about it. Over the last few weeks, I’ve been working on a project that combines AI, cybersecurity, and web development: 🔐 A …",
+         "url": "https://github.com/saturn-16/AI-Phishing-Detection-Web-App",
+         "status": "open",
+         "stars": 18
+      },
+      {
+         "repo": "howardliu-cn/hexo-theme-clean-dark",
+         "title": "A Simple Clean Dark Theme for Hexo",
+         "url": "https://github.com/howardliu-cn/hexo-theme-clean-dark",
+         "status": "open",
+         "stars": 34
+      },
+      {
+         "repo": "B143KC47/VSC4T",
+         "title": "A dark and elegant Hexo theme inspired by the Visual Studio Code dark theme. Clean, responsive, and highly customizable for your blog.",
+         "url": "https://github.com/B143KC47/VSC4T",
+         "status": "open",
+         "stars": 29
+      },
+      {
+         "repo": "D-Sketon/hexo-theme-reimu",
+         "title": "一款博丽灵梦风格的Hexo主题 | A Hakurei Reimu style Hexo theme. 💘Touhou💘",
+         "url": "https://github.com/D-Sketon/hexo-theme-reimu",
+         "status": "open",
+         "stars": 554
+      },
+      {
+         "repo": "codecrafters-io/build-your-own-x",
+         "title": "Master programming by recreating your favorite technologies from scratch.",
+         "url": "https://github.com/codecrafters-io/build-your-own-x",
+         "status": "open",
+         "stars": 557928
+      },
+      {
+         "repo": "H1R0GH057/Anonymous",
+         "title": "Anonymous",
+         "url": "https://github.com/H1R0GH057/Anonymous",
+         "status": "open",
+         "stars": 1997
+      }
+   ],
+   "community_discussions": []
+}

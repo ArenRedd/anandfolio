@@ -1,0 +1,125 @@
+{
+   "professional_experience": [
+      {
+         "id": 1,
+         "date": "January 2024 - June 2024",
+         "title": "Cloud Engineer Intern (Stipend)",
+         "position": "Internship",
+         "company": "TSF Group",
+         "location": "Chennai, Tamil Nadu",
+         "summary": "Designed serverless vehicle tracking on AWS, led on-premise SaaS migration, and built decoder microservices with IaC.",
+         "scene": "landing-zone",
+         "projects": [
+            {
+               "name": "Serverless Vehicle Tracking & Cloud Migration",
+               "date": "Jan 2024 - Jun 2024",
+               "scene": "security-controls",
+               "description": {
+                  "1": "Designed and implemented a serverless architecture on AWS for a real-time vehicle tracking system.",
+                  "2": "Successfully led the migration of an on-premise microservice solution to a cloud-based SaaS platform.",
+                  "3": "Developed a high-performance decoder microservice for Teltonika GPS tracking devices.",
+                  "4": "Implemented Infrastructure as Code (IaC) using AWS CloudFormation, CDK, and Terraform."
+               },
+               "case_study": {
+                  "problem": "An on-premise vehicle tracking system faced scaling bottlenecks and needed cloud migration with real-time GPS telemetry decoding.",
+                  "built": "Architected a serverless AWS platform with Lambda, API Gateway, DynamoDB, and automated IaC deployments via Terraform and CloudFormation.",
+                  "decisions": [
+                     "Serverless microservices architecture for automatic scaling and cost efficiency",
+                     "Decoupled Teltonika GPS telemetry decoder for sub-second packet parsing",
+                     "Infrastructure as Code using Terraform, CDK, and CloudFormation for repeatable deployments"
+                  ],
+                  "outcome": "Migrated legacy on-prem workloads to a cloud-native SaaS architecture, reducing latency and operational overhead."
+               },
+               "skills": [
+                  "AWS",
+                  "Serverless",
+                  "Terraform",
+                  "AWS CDK",
+                  "CloudFormation",
+                  "Microservices",
+                  "Python",
+                  "Docker",
+                  "DynamoDB",
+                  "CI/CD"
+               ]
+            }
+         ],
+         "internal_contributions": [],
+         "internal_achievements": []
+      },
+      {
+         "id": 2,
+         "date": "October 2023 - December 2023",
+         "title": "IT Support Engineer",
+         "position": "Intern",
+         "company": "FusionWorks Technologies",
+         "location": "Thiruvarur, Tamil Nadu",
+         "summary": "Provided IT support, system administration, data validation, and process improvements across business systems.",
+         "scene": "consulting-loop",
+         "projects": [
+            {
+               "name": "IT Infrastructure & Data Operations",
+               "date": "Oct 2023 - Dec 2023",
+               "description": {
+                  "1": "Conducted data analysis and digital documentation reviews to proactively identify and respond to operations.",
+                  "2": "Assisted in system upgrades, data validation, and process improvements to enhance tracking capabilities.",
+                  "3": "Maintained network endpoint reliability and resolved technical support escalations."
+               },
+               "skills": [
+                  "IT Support",
+                  "Networking",
+                  "System Upgrades",
+                  "Data Validation",
+                  "Documentation",
+                  "Linux"
+               ]
+            }
+         ],
+         "internal_contributions": [],
+         "internal_achievements": []
+      }
+   ],
+   "positions_of_responsibility": [
+      {
+         "id": 1,
+         "date": "2025 - Present",
+         "title": "Founder",
+         "position": "Student Lead",
+         "company": "Arifa Cyber Corps (Cybersecurity & Cloud Club)",
+         "location": "Nagapattinam, Tamil Nadu",
+         "summary": "Founded and lead a campus cybersecurity and cloud club; conducted technical workshops and awareness sessions for ~500 students.",
+         "description": {
+            "1": "Founded and lead campus cybersecurity and cloud club, delivering hands-on sessions for 500+ students.",
+            "2": "Organize peer-led training on AWS cloud infrastructure, security baselines, and CTF challenges."
+         },
+         "skills": [
+            "Cybersecurity",
+            "AWS",
+            "Cloud Architecture",
+            "Leadership",
+            "Community Building",
+            "Mentorship"
+         ]
+      },
+      {
+         "id": 2,
+         "date": "2025 - Present",
+         "title": "Campus Ambassador",
+         "position": "Student Ambassador",
+         "company": "AWS Student Builder & Google Student Ambassador",
+         "location": "Tamil Nadu, India",
+         "summary": "Recognised as an AWS Student Builder for cloud learning and community contributions; selected as Google Student Ambassador for tech advocacy.",
+         "description": {
+            "1": "Recognised as an AWS Student Builder for cloud learning and active community contributions.",
+            "2": "Selected as Google Student Ambassador for promoting Google developer initiatives and technology on campus."
+         },
+         "skills": [
+            "AWS",
+            "Google Cloud",
+            "Public Speaking",
+            "Developer Advocacy",
+            "Technical Workshops"
+         ]
+      }
+   ]
+}
