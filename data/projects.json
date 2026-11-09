@@ -217,6 +217,45 @@
          },
          "github": "https://github.com/ArenRedd/Secure-Company-Network-Architecture",
          "live": ""
+      },
+      {
+         "id": 12,
+         "title": "K3s AI Agent Platform",
+         "description": "A 10-node k3s cluster over a private Tailscale WireGuard mesh for running autonomous AI agents, with Prometheus/Grafana observability, role-based node pools, and sandboxed execution.",
+         "date": "November 2026",
+         "status": "complete",
+         "tools_tech": [
+            "K3s",
+            "Kubernetes",
+            "Tailscale",
+            "Prometheus",
+            "Grafana",
+            "WireGuard",
+            "Docker",
+            "Linux",
+            "Bash"
+         ],
+         "features": [
+            "10-node hybrid k3s cluster (1 control plane + 9 workers) interconnected via private Tailscale WireGuard mesh with zero public API exposure",
+            "Role-based node pools with custom labels and selectors: general agent workers, vector memory, browser automation, and deny-all sandbox execution",
+            "Hardened security posture featuring NetworkPolicy deny-all isolation for agent sandboxes and Tailscale-only authenticated ingress",
+            "Full-stack observability with Prometheus, Grafana, kube-state-metrics, and node-exporter providing real-time CPU, RAM, and pod metrics",
+            "Pragmatic cloud-native networking: custom DNS policy, headless services, and Flannel CNI tailored for bare-metal provider constraints",
+            "Operational runbooks for automated crictl disk pruning on 16 GB nodes, systemd port-forwarding services, and Headlamp dashboard management"
+         ],
+         "case_study": {
+            "problem": "Deploying autonomous AI agents requires isolated compute pools, deep telemetry, and secure networking, but cloud-managed Kubernetes clusters incur steep ongoing costs and provider kernels often break multi-endpoint load balancing.",
+            "built": "Architected and provisioned a 10-node k3s cluster over a private Tailscale WireGuard mesh with role-labeled worker pools, sandboxed namespaces, and a complete Prometheus and Grafana observability stack.",
+            "decisions": [
+               "Traded multi-master HA for single control plane stability to work around provider kernel limits on random ClusterIP balancing",
+               "Secured cluster networking strictly over Tailscale WireGuard mesh, eliminating public ingress and cloud load balancer costs",
+               "Segmented worker nodes by dedicated roles (general, memory, observability, browser, sandbox) using nodeSelectors and taints",
+               "Implemented automated crictl prune routines to reliably operate within 16 GB node disk constraints"
+            ],
+            "outcome": "Verified 9 Ready worker nodes with full metrics in Grafana, sub-millisecond pod communication, and a turnkey execution platform ready for sandboxed AI agents."
+         },
+         "github": "https://github.com/ArenRedd/k3s-ai-agent-platform",
+         "live": ""
       }
    ],
    "collaborative_projects": [],

@@ -48,6 +48,12 @@
       "Amazon Q"
    ],
    "devops": [
+      "Kubernetes",
+      "K3s",
+      "Docker",
+      "Tailscale",
+      "Prometheus",
+      "Grafana",
       "Terraform",
       "HCP Terraform",
       "Atlantis",

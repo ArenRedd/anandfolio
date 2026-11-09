@@ -72,6 +72,12 @@ import {
    SiGithubpages,
    SiPnpm,
    SiEsbuild,
+   SiKubernetes,
+   SiPrometheus,
+   SiGrafana,
+   SiTailscale,
+   SiK3S,
+   SiWireguard,
 } from "react-icons/si";
 import { FaJava, FaAws } from "react-icons/fa";
 import { TbBrandCSharp, TbBrandVscode, TbApi } from "react-icons/tb";
@@ -192,6 +198,12 @@ const SKILL_ICONS: Record<string, SkillIcon> = {
    Neon: { Icon: SiNeon, color: "#00E599" },
 
    // DevOps & IaC
+   Kubernetes: { Icon: SiKubernetes, color: "#326CE5" },
+   K3s: { Icon: SiK3S, color: "#FFC61C" },
+   Tailscale: { Icon: SiTailscale, color: "#4E6272" },
+   Prometheus: { Icon: SiPrometheus, color: "#E6522C" },
+   Grafana: { Icon: SiGrafana, color: "#F46800" },
+   WireGuard: { Icon: SiWireguard, color: "#88171A" },
    Terraform: { Icon: SiTerraform, color: "#844FBA" },
    Docker: { Icon: SiDocker, color: "#2496ED" },
    Ansible: { Icon: SiAnsible, color: "#EE4444" },

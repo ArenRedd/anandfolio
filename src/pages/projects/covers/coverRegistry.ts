@@ -21,6 +21,7 @@ const ForgeScene = lazy(() => import("./ForgeScene"));
 const BrainScene = lazy(() => import("./BrainScene"));
 const LedgerScene = lazy(() => import("./LedgerScene"));
 const PortfolioScene = lazy(() => import("./PortfolioScene"));
+const AgentCoreScene = lazy(() => import("./AgentCoreScene"));
 
 type ProjectCover = {
    kind: "scene";
@@ -40,6 +41,7 @@ const COVER_BY_ID: Record<number, ProjectCover> = {
    4: { kind: "scene", Scene: InfraScene }, // Advanced Blue-Green Deployments with CodeDeploy
    5: { kind: "scene", Scene: GraphScene }, // TOR-UNVEIL: Network Forensics & Deanonymization
    6: { kind: "scene", Scene: GateScene }, // Enterprise Secure Company Network Architecture
+   12: { kind: "scene", Scene: AgentCoreScene }, // K3s AI Agent Platform
 
    // Community: Autonomous Agents & Research Blog
    7: { kind: "scene", Scene: BrainScene }, // Hermes Agent Expert Knowledge Skill
