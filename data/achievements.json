@@ -465,7 +465,7 @@
       },
       {
          "id": 12,
-         "title": "Recursion Edition 2 \u2014 Shortlisted",
+         "title": "Recursion Edition 2 — Shortlisted",
          "organizer": "VIT Chennai",
          "date": "September 2026",
          "type": "Hackathon"
@@ -503,32 +503,36 @@
       "github": {
          "username": "ArenRedd",
          "url": "https://github.com/ArenRedd",
-         "contributions": 482,
-         "pull_requests": 64,
-         "longest_streak": 28,
+         "contributions": 895,
+         "pull_requests": 6,
+         "longest_streak": 9,
          "languages": [
             {
-               "name": "Python",
-               "percent": 45.0
-            },
-            {
-               "name": "Shell",
-               "percent": 25.0
+               "name": "HTML",
+               "percent": 84.9
             },
             {
                "name": "TypeScript",
-               "percent": 15.0
+               "percent": 9.5
+            },
+            {
+               "name": "Python",
+               "percent": 2.3
             },
             {
                "name": "JavaScript",
-               "percent": 10.0
+               "percent": 1.6
             },
             {
                "name": "CSS",
-               "percent": 5.0
+               "percent": 0.9
+            },
+            {
+               "name": "SCSS",
+               "percent": 0.5
             }
          ],
-         "fetched": "2026-10-31"
+         "fetched": "2026-11-09"
       }
    }
 }
